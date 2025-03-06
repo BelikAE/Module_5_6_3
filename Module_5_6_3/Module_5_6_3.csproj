@@ -59,9 +59,6 @@
       <HintPath>..\..\..\..\..\..\..\..\Program Files\Autodesk\Revit 2021\RevitAPIUI.dll</HintPath>
       <Private>False</Private>
     </Reference>
-    <Reference Include="RevitLibraryBLK">
-      <HintPath>..\..\RevitLibraryBLK\RevitLibraryBLK\bin\Debug\RevitLibraryBLK.dll</HintPath>
-    </Reference>
     <Reference Include="System" />
     <Reference Include="System.Configuration" />
     <Reference Include="System.Core" />
@@ -97,6 +94,12 @@
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\..\..\RevitAPITrainingLibrary\RevitAPITrainingLibrary.csproj">
+      <Project>{c7864cf2-8c0c-4ec9-8052-f12f1c4a016c}</Project>
+      <Name>RevitAPITrainingLibrary</Name>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <PropertyGroup>

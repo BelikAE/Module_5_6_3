@@ -6,8 +6,19 @@
              xmlns:local="clr-namespace:Module_5_6_3"
              mc:Ignorable="d" 
              Height="200" Width="300"
-             Title="Наименование">
+             Title="Создание элементов">
     <StackPanel>
-        
+        <Label Content="Выбрать тип из списка"
+           Margin="5"/>
+        <ComboBox ItemsSource="{Binding Types}"
+          SelectedValue ="{Binding SelectedType}"
+          DisplayMemberPath="Name"
+          Margin="5"/>
+
+        <Label Content="Количеcтво элементов:"/>
+        <TextBox Text="{Binding Amount}" Margin="5"/>
+        <Button Content="Создать"
+         Command="{Binding CreateCommand}"
+         Margin="5"/>
     </StackPanel>
 </Window>
